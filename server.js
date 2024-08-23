@@ -6,6 +6,7 @@ const mongoose=require("mongoose");
 // const {Login,Register}=require("./controllers/auth");
 const cors=require("cors");
 // routes
+const port=3000||process.env.PORT;
 const authRoute=require("./routes/auth");
 // const productRoute=require("./routes/product");
 const sellerRoute=require("./routes/seller");
@@ -31,6 +32,6 @@ app.use('/orders', orderRoute);
 
 // app.post("/register",Register);
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("server is running on port 3000");
 })
